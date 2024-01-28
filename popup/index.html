@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Cats for Facebook</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div id="notice" style="display: none">Saved changes.</div>
+
+        <header>
+            <h3>Cats for Facebook</h3>
+        </header>
+
+        <nav>
+            <div class="tab-link active" data-tab="prompt">Prompt</div>
+            <div class="tab-link" data-tab="setup">Setup</div>
+        </nav>
+
+        <main>
+            <section class="tab" data-tab="prompt">
+                <fieldset>
+                    <h3>Prompt</h3>
+                    <p>
+                        This controls the personality and style of the new
+                        Names, Posts and Comments.
+                    </p>
+                    <textarea id="prompt"></textarea>
+                </fieldset>
+            </section>
+
+            <section class="tab" data-tab="setup" style="display: none">
+                <fieldset>
+                    <h3>OpenAI API Key</h3>
+                    <p>Add your openai api key here.</p>
+                    <input id="openai_key" type="password" />
+                </fieldset>
+
+                <fieldset>
+                    <h3>OpenAI Model</h3>
+                    <p>Select model to use.</p>
+                    <select id="openai_model">
+                        <option value="gpt-4-0125-preview">GPT-4 Turbo</option>
+                        <option value="gpt-3.5-turbo-1106">
+                            GPT-3.5 Turbo
+                        </option>
+                    </select>
+                </fieldset>
+            </section>
+
+            <button id="save">Save</button>
+        </main>
+
+        <script src="script.js"></script>
+    </body>
+</html>

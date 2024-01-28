@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Samurai Facebook Cats",
+  "version": "1.0",
+  "description": "It will turn Facebook friends into cats of all types and personalities using OpenAI API.",
+  "permissions": ["activeTab", "storage"],
+  "action": {
+    "default_popup": "popup/index.html",
+    "default_icon": {
+      "48": "icon.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.facebook.com/*"],
+      "js": ["inject.js"],
+      "css": ["style.css"]
+    }
+  ],
+  "icons": { "48": "icon.png", "128": "icon128.png" }
+}
